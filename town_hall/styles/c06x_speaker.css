@@ -59,13 +59,28 @@ section h2 {
 	font-size: 120%;
 	padding-bottom: .25em;
 }
+article{ 
+	padding: .5em 0; 
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+	column-count: 2;
+	column-gap: 20px;
+}
+article h2{ 
+	padding-top: 0;
+}
+article h3{ 
+	font-size: 105%;
+	padding-bottom: .25em; 
+}
 article p {
 	padding-bottom: .5em;
 }
 article img {
-	float: right;
-	margin: .25em 0 1em 1em;
+	float: left;
+	margin: .25em 1em 1em 0;
 	border: 1px solid black;
+	width: 275px;
 }
 aside {
 	width: 215px;

@@ -1,4 +1,87 @@
-body {
-	font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+/* Set the background color for the entire page */ 
+html {
+    background-color: yellow; 
+    display: flex;
+    justify-content: center;
+}
+
+/* Wrapper container to limit the yellow background */ 
+
+.container{ 
+    background-color: yellow; 
+    padding: 40px 0; /* Space at the top to show yelloe background */ 
+}
+
+/* Style the body element */ 
+
+body{ 
+    background-color: white; 
+    width: 650px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    border: double blue 10px; 
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the main element */ 
+
+main{ 
+    padding: 20px;
+}
+/* Style for the footer element */ 
+footer{ 
+    border-top: 4px solid blue; 
+    text-align: center; 
+    font-size: 90%; 
+    font-weight: bold; 
+    padding: 10px 0; 
+    margin-top: 20px; /* Ensure the footer has some space above */ 
+}
+
+/* Style for headings */
+
+h1{ 
+    font-size: 150%; 
+    color: blue; 
+    margin: 0px 0; 
+}
+h2{ 
+    font-size: 125%; 
+    margin: 10px 0;
+}
+h3{ 
+    font-size: 115%; 
+    margin: 10px 0;
+}
+/* Style for paragraphs, blockqoutes, ul and li */ 
+p{
+    margin: 10px 0; 
+}
+blockquote{ 
+    margin: 10px 0; 
+    font-style: normal;
+}
+ul{ 
+    margin: 10px 0; 
+    padding-left: 20px; 
+}
+li{ 
+    margin: 5px 0;
+}
+/* Style for cite elements */ 
+cite{ 
+    color: blue;
+    font-style: normal;
+    display: block; 
+    text-align: right; 
+}
+.cite-paragraph{ 
+    text-align: right; 
+    margin-bottom: 0.75em;
+}
+img{ 
+    float: left; 
+    margin-right: 20px; 
+    margin-bottom: 10px; 
+    padding: 5px;
 }

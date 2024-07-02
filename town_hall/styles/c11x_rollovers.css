@@ -94,6 +94,20 @@ aside img {
 	padding-bottom: 1em;
 }
 
+.image-rollover{
+	width: 260px;
+	height: 260px;
+	background-image: url('../images/sampson_dinosaur.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: background-image 0.3s ease-in-out;
+}
+
+.image-rollover:hover{
+	background-image: url('../images/sorkin_desk260.jpg');
+}
+
+
 /* the styles for the footer */
 footer {
 	background-color: #931420;

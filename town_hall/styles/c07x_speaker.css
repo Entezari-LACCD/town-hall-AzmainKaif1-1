@@ -94,6 +94,46 @@ aside img {
 	padding-bottom: 1em;
 }
 
+#nav_list ul{
+	list-style-type: none; 
+	padding: 0;
+	margin: 0;
+}
+#nav_list li{
+	margin-bottom: 10px;
+	list-style-type: none;
+}
+#nav_list a{
+	display: block; 
+	padding: 12px; 
+	text-decoration: none;
+	color: #000; 
+	border: 1px solid #000; 
+	border-radius: 5px; 
+	box-shadow: 4px 4px 0px #800000;
+	background-image: url('../images/right.jpg');
+	background-repeat: no-repeat; 
+	background-position: 95% center; 
+}
+#nav_list a:hover{
+	background-color: #f0f0f0;
+}
+#nav_list a:active,
+#nav_list a.current{
+	color: #800000;
+}
+#nav_list a.home-link{
+	color:blue;
+	border: none; 
+	background-image: none; 
+	box-shadow: none;
+	text-decoration: underline;
+}
+#nav_list a.home-link:hover{
+	background-color: transparent;
+	font-style: normal;
+}
+
 /* the styles for the footer */
 footer {
 	background-color: #931420;

@@ -9,7 +9,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 850px;
+    width: 98%;
+	max-width: 980px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -34,21 +35,24 @@ header h3 {
 }
 header img {
 	float: left;
-	padding: 0 30px;
+	padding: 0 3%;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
 /* the styles for the main content */
 main {
-	clear: left;
+	display: flex; 
+	flex-wrap: wrap;
 }
 
 /* the styles for the section */
 section {
-	width: 575px;
-	float: right;
-	padding: 0 20px 20px 20px;
+	width: 70%;
+	order: 2;
+	padding: 1%;
+	float: none;
+	box-sizing: border-box;
 }
 section h1 {
 	color: #800000;
@@ -69,16 +73,20 @@ article h2 {
 	padding: 0 0 .25em 0;
 }
 article img {
+	width: 50%;
+	height: auto; 
 	float: right;
-	margin: .5em 0 1em 1em;
+	margin: .5em 0 1em 1em; 
 	border: 1px solid black;
 }
 
 /* the styles for the aside */
 aside {
-	width: 215px;
-	float: right;
-	padding: 0 0 20px 20px;
+	width: 30%;
+	order: 1;
+	padding: 1%; 
+	float: none; 
+	box-sizing: border-box;
 }
 aside h2 {
 	color: #800000;
@@ -92,6 +100,8 @@ aside h3 {
 }
 aside img {
 	padding-bottom: 1em;
+	width: 50%;
+	height: auto;
 }
 
 #nav_list ul{

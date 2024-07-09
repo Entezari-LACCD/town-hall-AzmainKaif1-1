@@ -86,11 +86,12 @@ header img {
 /* the styles for the main content */
 main {
     display: flex;
+	flex-wrap: wrap;
 }
 
 /* the styles for the section */
 section {
-    flex-basis: 70%;
+    flex-basis: 1 1 50%;
     order: 2;
 	padding: 0 2.5% 20px 2.5%;
 }
@@ -124,6 +125,7 @@ article {
 	padding: .5em 0;
 	border-top: 2px solid #800000;
 	border-bottom: 2px solid #800000;
+	overflow: hidden;
 }
 article h2 {
 	padding-top: 0;
@@ -138,13 +140,22 @@ article img {
 	min-width: 150px;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 /* the styles for the aside */
 aside {
-    flex-basis: 30%;
-    order: 1;
+    flex-basis: 1 1 25%;
 	padding: 0 0 20px 2.5%;
+}
+#middle-aside{
+	order: 3;
+}
+#left-aside{
+	order: 1;
+}
+#right-aside{
+	order: 4;
 }
 aside h2 {
 	color: #800000;

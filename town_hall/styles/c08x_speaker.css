@@ -35,6 +35,8 @@ header h3 {
 header img {
 	float: left;
 	padding: 0 30px;
+	max-width: 100%;
+	height: auto;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
@@ -152,9 +154,16 @@ aside img {
 	}
 	header{
 		padding: 1em 0; 
+		text-align: left;
+		align-items: center;
+		justify-content: center;
+		
 	}
 	header img{
-		display: none; 
+		display: block;
+		margin-top: -10px;
+		height: 80px;
+		max-width: none;
 	}
 	
 }

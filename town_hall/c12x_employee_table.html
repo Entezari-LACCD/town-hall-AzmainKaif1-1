@@ -2,81 +2,117 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Employee table</title>
-	<style>
-		body {
-			width: 750px;
-			margin: 0 auto;
-		}
-		table {
-			border-collapse: collapse;
-			border: 1px solid black;
-			margin: 20px;
-		}
-		thead {
+    <title>Employee Table</title>
+    <style>
+        body {
+            width: 750px;
+            margin: 0 auto;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: 20px;
+            width: 100%;
+        }
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        thead {
+            background-color: yellow;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: .2em 1em .2em .5em;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .right {
+            text-align: right;
+        }
+        tbody tr:nth-child(even) td {
+            background-color: yellow;
+        }
+		tbody tr:nth-child(4) td:nth-child(1),
+        tbody tr:nth-child(6) td:nth-child(1) {
+         background-color: white;
+        }
+        tfoot td {
+            font-weight: bold;
 			background-color: yellow;
-		}
-		th, td {
-			border: 1px solid black;
-			padding: .2em 1em .2em .5em;
-			text-align: left;
-			vertical-align: middle;
-		}
-		.right {
-			text-align: right;
-		}
-		tbody tr:nth-child(even) td {
-			background-color: yellow;
-		}
-	</style>
+        }
+        tbody tr:hover {
+            background-color: #e0e0e0;
+        }
+        thead th:nth-child(4), tbody td:nth-child(4), tfoot td:nth-child(4) {
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>
 <table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>E-mail</th>
-			<th class="right">Years of Service</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Joel Murach</td>
-			<td>joelmurach@yahoo.com</td>
-			<td class="right">22</td>
-		</tr>
-		<tr>
-			<td>Anne Boehm</td>
-			<td>anne@murach.com</td>
-			<td class="right">34</td>
-		</tr>
-		<tr>
-			<td>Zak Ruvalcaba</td>
-			<td>zak@modulemedia.com</td>
-			<td class="right">4</td>
-		</tr>
-		<tr>
-			<td>Judy Taylor</td>
-			<td>judy@murach.com</td>
-			<td class="right">39</td>
-		</tr>
-		<tr>
-			<td>Bethany Lee</td>
-			<td>bethany@murach.com</td>
-			<td class="right">10</td>
-		</tr>
-		<tr>
-			<td>Kelly Slivkoff</td>
-			<td>kelly@murach.com</td>
-			<td class="right">25</td>
-		</tr>
-		<tr>
-			<td>Juliette Baylon</td>
-			<td>juliette@murach.com</td>
-			<td class="right">1</td>
-		</tr>
-	</tbody>
+    <caption>Employee Table</caption>
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th class="right">Years of Service</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3">Editorial</td>
+            <td>Joel Murach</td>
+            <td>joelmurach@yahoo.com</td>
+            <td class="right">22</td>
+        </tr>
+        <tr>
+            <td>Anne Boehm</td>
+            <td>anne@murach.com</td>
+            <td class="right">34</td>
+        </tr>
+        <tr>
+            <td>Zak Ruvalcaba</td>
+            <td>zak@modulemedia.com</td>
+            <td class="right">4</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Marketing</td>
+            <td>Judy Taylor</td>
+            <td>judy@murach.com</td>
+            <td class="right">39</td>
+        </tr>
+        <tr>
+            <td>Bethany Lee</td>
+            <td>bethany@murach.com</td>
+            <td class="right">10</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Customer Service</td>
+            <td>Kelly Slivkoff</td>
+            <td>kelly@murach.com</td>
+            <td class="right">25</td>
+        </tr>
+        <tr>
+            <td>Juliette Baylon</td>
+            <td>juliette@murach.com</td>
+            <td class="right">1</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="right">Total Years of Service</td>
+            <td class="right">105</td>
+        </tr>
+    </tfoot>
 </table>
 </body>
 </html>

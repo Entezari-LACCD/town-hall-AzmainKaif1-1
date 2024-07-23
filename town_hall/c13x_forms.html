@@ -37,25 +37,61 @@
 		#button, #reset {
 			width: 7em;
 			background-color: silver;
-			box-shadow: 2px 2px 0 blue; }
+			box-shadow: 2px 2px 0 blue;
+		}
 		#button {
 			margin-left: 9em;
+		}
+		.checkbox-group {
+			display: flex;
+			flex-direction: column;
+			margin-left: 0em;
+			margin-right: 13em;
+		}
+		.checkbox-group label {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%; /* Ensure label takes the full width */
+			margin-bottom: 0em; /* Adjust this value to increase or decrease spacing */
+		}
+		.checkbox-group label span{
+			margin-right: 0em;
 		}
 	</style>
 </head>
 
 <body>
 <h1>Please complete our survey</h1>
-<form id="myform" action="survey.php" method="post">
-	
+<!-- Modified form to use the "get" method and submit to "survey_data.html" -->
+<form id="myform" action="survey_data.html" method="get"> 
 	<h2>Contact information</h2>
+	<!-- Added "required" and "autofocus" attributes to the email field -->
 	<label for="email">Email address:</label>
-    <input type="email" name="email" id="email"><br>
+    <input type="email" name="email" id="email" required autofocus><br> 
+    <!-- Added "required" attribute to the first name field -->
     <label for="firstname">First name:</label>
-    <input type="text" name="firstname" id="firstname"><br>
+    <input type="text" name="firstname" id="firstname" required><br> 
+    <!-- Added "required" attribute to the last name field -->
     <label for="lastname">Last name:</label>
-    <input type="text" name="lastname" id="lastname"><br>
-    
+    <input type="text" name="lastname" id="lastname" required><br> 
+
+    <!-- Added Geographic information section -->
+    <h2>Geographic Information</h2> 
+    <label for="state">State:</label>
+    <input type="text" name="state" id="state" required placeholder="Two characters" pattern="[A-Za-Z]{2}"><br> 
+    <label for="zip">Zip Code:</label>
+    <input type="text" name="zip" id="zip" required placeholder="Five digits" pattern="\d{5}"><br> 
+
+    <!-- Added "How did you hear about us" section in one vertical line -->
+    <h2>How did you hear about us?</h2> 
+    <div class="checkbox-group">
+        <label><span>Web Search</span><input type="checkbox" name="referral" value="internet"></label> 
+        <label><span>Facebook</span><input type="checkbox" name="referral" value="friend"></label> 
+        <label><span>Twitter</span><input type="checkbox" name="referral" value="advertisement"></label>
+        <label><span>Email message</span><input type="checkbox" name="referral" value="email"></label>
+    </div>
+
     <h2>Thank you for taking our survey!</h2>
     <input type="submit" name="button" id="button" value="Submit">
     <input type="reset" name="reset" id="reset"> 

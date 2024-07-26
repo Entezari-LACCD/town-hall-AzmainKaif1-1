@@ -42,6 +42,19 @@ header h3 {
 header img {
     float: left;
     padding: 0 3%;
+    animation: bounce 0.5s ease-in 8 alternate;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    from {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    to {
+        padding-left: 20px;
+        padding-right: 0;
+    }
 }
 
 .shadow {

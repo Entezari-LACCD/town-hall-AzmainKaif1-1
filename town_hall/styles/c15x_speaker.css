@@ -1,107 +1,184 @@
 /* the styles for the elements */
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 html {
-	background-color: white;
+    background-color: white;
 }
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 850px;
+    width: 98%;
+    max-width: 980px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
 }
+
 a:focus, a:hover {
-	font-style: italic;
+    font-style: italic;
 }
+
 /* the styles for the header */
 header {
-	padding: 1.5em 0 2em 0;
-	border-bottom: 3px solid #931420;
-	background-image: linear-gradient(
-	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+    padding: 1.5em 0 2em 0;
+    border-bottom: 3px solid #931420;
+    background-image: linear-gradient(30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
 }
+
 header h2 {
-	font-size: 175%;
-	color: #800000;
+    font-size: 175%;
+    color: #800000;
 }
+
 header h3 {
-	font-size: 130%;
-	font-style: italic;
+    font-size: 130%;
+    font-style: italic;
 }
+
 header img {
-	float: left;
-	padding: 0 30px;
+    float: left;
+    padding: 0 3%;
 }
+
 .shadow {
-	text-shadow: 2px 2px 2px #800000;
+    text-shadow: 2px 2px 2px #800000;
 }
+
 /* the styles for the main content */
 main {
-	clear: left;
+    display: flex; 
+    flex-wrap: wrap;
 }
 
 /* the styles for the section */
 section {
-	width: 575px;
-	float: right;
-	padding: 0 20px 20px 20px;
+    width: 70%;
+    order: 2;
+    padding: 1%;
+    float: none;
+    box-sizing: border-box;
 }
+
 section h1 {
-	color: #800000;
-	font-size: 150%;
-	padding-top: .5em;
-	margin: 0;
+    color: #800000;
+    font-size: 150%;
+    padding-top: .5em;
+    margin: 0;
 }
+
 section p {
-	padding-bottom: .5em;
+    padding-bottom: .5em;
 }
 
 /* the styles for the article */
 article {
-	padding: .5em 0;
+    padding: .5em 0;
 }
+
 article h2 {
-	font-size: 115%;
-	padding: 0 0 .25em 0;
+    font-size: 115%;
+    padding: 0 0 .25em 0;
 }
+
 article img {
-	float: right;
-	margin: .5em 0 1em 1em;
-	border: 1px solid black;
+    width: 50%;
+    height: auto; 
+    float: right;
+    margin: .5em 0 1em 1em; 
+    border: 1px solid black;
 }
 
 /* the styles for the aside */
 aside {
-	width: 215px;
-	float: right;
-	padding: 0 0 20px 20px;
+    width: 30%;
+    order: 1;
+    padding: 1%; 
+    float: none; 
+    box-sizing: border-box;
 }
+
 aside h2 {
-	color: #800000;
-	font-size: 130%;
-	padding: .6em 0 .25em 0;
+    color: #800000;
+    font-size: 130%;
+    padding: .6em 0 .25em 0;
 }
 
 aside h3 {
-	font-size: 105%;
-	padding-bottom: .25em;
+    font-size: 105%;
+    padding-bottom: .25em;
 }
+
 aside img {
-	padding-bottom: 1em;
+    padding-bottom: 1em;
+    width: 50%;
+    height: auto;
+}
+
+/* Guest Speakers Section Styling */
+#nav_list ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+#nav_list li {
+    margin-bottom: 20px; /* Space between each guest speaker */
+    padding: 10px 0; /* Padding around each item */
+    border-bottom: 1px solid #931420; /* Border color to match theme */
+    transition: transform 3s; /* Transition for rotation */
+}
+
+#nav_list li:hover {
+    transform: rotate(360deg); /* Rotate 360 degrees on hover */
+}
+
+#nav_list a {
+    display: block; 
+    padding: 12px; 
+    text-decoration: none;
+    color: #000; 
+    border: 1px solid #000; 
+    border-radius: 5px; 
+    box-shadow: 4px 4px 0px #800000;
+    background-image: url('../images/right.jpg');
+    background-repeat: no-repeat; 
+    background-position: 95% center; 
+}
+
+#nav_list a:hover {
+    background-color: #f0f0f0;
+}
+
+#nav_list a:active,
+#nav_list a.current {
+    color: #800000;
+}
+
+#nav_list a.home-link {
+    color: blue;
+    border: none; 
+    background-image: none; 
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+#nav_list a.home-link:hover {
+    background-color: transparent;
+    font-style: normal;
 }
 
 /* the styles for the footer */
 footer {
-	background-color: #931420;
-	clear: both;
-
+    background-color: #931420;
+    clear: both;
 }
+
 footer p {
-	text-align: center;
-	color: white;
-	padding: 1em 0;
+    text-align: center;
+    color: white;
+    padding: 1em 0;
 }
